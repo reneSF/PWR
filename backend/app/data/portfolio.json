@@ -1,0 +1,158 @@
+{
+  "about": {
+    "name": "René López Medina",
+    "role": "Desarrollador Full-Stack | Python • React/Vue • Automatización",
+    "location": "Guanajuato, México",
+    "summary": "Ingeniería en Sistemas Computacionales (UG DICIS). Desarrollo soluciones web end-to-end y automatizo procesos con enfoque en productos de datos. En ITRASIG he trabajado en generación de reportes PDF dinámicos desde JSON, backend en Python y desarrollo frontend para plataformas orientadas a control epidemiológico.",
+    "highlights": [
+      "Full-stack: diseño de UI, consumo de APIs, lógica de negocio y despliegue",
+      "Automatización: reportes PDF dinámicos con plantillas y contenido multipágina",
+      "Integración: datos estructurados (JSON), módulos interactivos y herramientas de DevOps"
+    ],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/tuusuario" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/tuusuario" },
+      { "label": "CV (PDF)", "url": "/cv.pdf" }
+    ]
+  },
+  "experience": [
+    {
+      "company": "ITRASIG",
+      "title": "Desarrollador Full-Stack (Python + Web)",
+      "period": "2025",
+      "location": "México",
+      "summary": "Desarrollo de componentes clave para soluciones orientadas a control epidemiológico y automatización de reportes, integrando backend en Python y frontend moderno.",
+      "bullets": [
+        "Implementé generación de reportes PDF clínico-científicos desde JSON (plantillas decoradas), con tablas dinámicas, figuras numeradas y secciones multipágina.",
+        "Depuré y reforcé la lógica de ensamblado/merge de PDFs, evitando errores por páginas vacías y mejorando la estabilidad del pipeline.",
+        "Apoyé el backend de un cotizador (lógica de cálculo y estructura de datos) y construí interfaces web para captura/visualización.",
+        "Desarrollé una web de noticias epidemiológicas (PABLO NEWS) enfocada en consumo y presentación clara de información, con integración a flujos automatizados."
+      ],
+      "tech": [
+        "Python",
+        "FastAPI",
+        "JSON",
+        "ReportLab",
+        "PyPDF2",
+        "React",
+        "Vue",
+        "Docker",
+        "Linux"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "PABLO IA — Generador de Reportes PDF Diagnóstico",
+      "tag": "ITRASIG",
+      "featured": true,
+      "description": "Sistema de generación dinámica de reportes PDF a partir de JSON, conservando diseño de plantillas. Incluye portada, secciones por enfermedad, interpretación automatizada, tablas y figuras con numeración dependiente del contenido, y manejo multipágina.",
+      "impact": [
+        "Automatización de reportes para reducir edición manual",
+        "Soporte de variaciones según enfermedades detectadas (p. ej. presencia/ausencia de controles)",
+        "Salida consistente para uso técnico/científico"
+      ],
+      "stack": ["Python", "ReportLab", "PyPDF2", "JSON"],
+      "links": [
+        { "label": "Repositorio", "url": "https://github.com/tuusuario/pablo-pdf" },
+        { "label": "Demo", "url": "https://tusitio.com/demo-pdf" }
+      ]
+    },
+    {
+      "title": "PABLO NEWS — Portal de Noticias Epidemiológicas",
+      "tag": "ITRASIG",
+      "featured": true,
+      "description": "Portal web para visualizar noticias epidemiológicas nacionales e internacionales con enfoque informativo (no amarillista). Diseñado para actualizarse con fuentes dinámicas y presentar contenido de forma clara.",
+      "impact": [
+        "Visualización estructurada por temas/fuentes",
+        "Mejor UX para lectura rápida y filtros",
+        "Preparado para integrarse a flujos automatizados (bots/feeds)"
+      ],
+      "stack": ["Frontend Web", "HTML/CSS", "JavaScript", "Consumo de JSON"],
+      "links": [
+        { "label": "Sitio", "url": "https://tusitio.com/pablo-news" }
+      ]
+    },
+    {
+      "title": "Cotizador Web — Oligos y Zondas",
+      "tag": "ITRASIG",
+      "featured": false,
+      "description": "Desarrollo y apoyo full-stack para un cotizador: captura de parámetros, reglas de precios y visualización. Preparado para generar comprobantes/recibos (PDF) y escalar a flujo comercial.",
+      "impact": [
+        "Estandarización de entradas (campos y validaciones)",
+        "Base para automatización de cálculo y generación de documentos"
+      ],
+      "stack": ["Python", "Backend", "Frontend", "JSON"],
+      "links": [
+        { "label": "Caso/Descripción", "url": "https://tusitio.com/cotizador" }
+      ]
+    },
+    {
+      "title": "NASA Space Apps Challenge — Participación",
+      "tag": "NASA Space Apps",
+      "featured": true,
+      "description": "Participación en hackathon internacional. Trabajo en equipo para plantear una solución basada en datos (define aquí el reto específico) con enfoque en prototipado rápido, narrativa y entrega funcional.",
+      "impact": [
+        "Colaboración multidisciplinaria bajo presión",
+        "Prototipo con enfoque en impacto y claridad de presentación"
+      ],
+      "stack": ["Prototipado", "Datos", "Web", "APIs (si aplica)"],
+      "links": [
+        { "label": "Proyecto", "url": "https://tusitio.com/spaceapps" }
+      ]
+    },
+    {
+      "title": "CCI — Participación y Colaboración",
+      "tag": "CCI",
+      "featured": false,
+      "description": "Participación en actividades/proyectos con enfoque en colaboración, desarrollo técnico y soporte a entregables. (Aquí luego ponemos el nombre exacto del proyecto/rol.)",
+      "impact": [
+        "Trabajo en equipo y comunicación técnica",
+        "Aporte a entregables y organización"
+      ],
+      "stack": ["Trabajo en equipo", "Desarrollo", "Presentación"],
+      "links": []
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "React",
+      "Vue",
+      "Vite",
+      "HTML",
+      "CSS",
+      "Tailwind"
+    ],
+    "backend": [
+      "Python",
+      "FastAPI",
+      "APIs REST",
+      "Validación de datos (Pydantic)"
+    ],
+    "automation_pdf": [
+      "ReportLab",
+      "PyPDF2",
+      "Generación multipágina",
+      "Tablas dinámicas",
+      "Diseño con plantillas"
+    ],
+    "devops_tools": [
+      "Docker",
+      "Linux",
+      "Git/GitHub",
+      "CLI"
+    ],
+    "soft_skills": [
+      "Comunicación técnica",
+      "Trabajo en equipo",
+      "Pensamiento analítico",
+      "Autonomía"
+    ]
+  },
+  "contact": {
+    "email": "r.lopezmedina@ugto.mx",
+    "phone": "4623355751",
+    "location": "Guanajuato, México",
+    "cta": "¿Te interesa mi perfil? Envíame un mensaje y con gusto platicamos."
+  }
+}
