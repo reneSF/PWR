@@ -57,7 +57,7 @@ export default function Home() {
   }
 
   const shellClass =
-    "min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100";
+  "min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100";
 
   if (loading) {
     return (
@@ -83,14 +83,20 @@ export default function Home() {
     <div className={shellClass}>
       {/* Decorative gradients */}
       <div className="pointer-events-none fixed inset-0">
-        <div className="absolute left-1/2 top-[-120px] h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-violet-500/15 blur-3xl" />
-        <div className="absolute right-[-140px] top-[200px] h-[360px] w-[360px] rounded-full bg-cyan-400/10 blur-3xl" />
+        <div className="absolute left-1/2 top-[-140px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-indigo-500/14 blur-3xl" />
+        <div className="absolute right-[-180px] top-[240px] h-[420px] w-[420px] rounded-full bg-emerald-500/10 blur-3xl" />
+        <div className="absolute left-[-180px] bottom-[-140px] h-[420px] w-[420px] rounded-full bg-sky-500/8 blur-3xl" />
       </div>
 
       <header className="sticky top-0 z-20 border-b border-black/10 bg-slate-50/70 backdrop-blur dark:border-white/10 dark:bg-slate-950/70">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
           <div className="flex items-center gap-3">
             <ThemeToggle theme={theme} toggle={toggle} />
+            <img
+              src="/itrasig-logo.png"
+              alt="ITRASIG"
+              className="h-9 w-9 rounded-xl border border-black/10 bg-white p-1 object-contain dark:border-white/10"
+            />
             <img
               src="/avatar.png"
               alt="Foto de perfil"
@@ -102,6 +108,9 @@ export default function Home() {
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-300/70">
                 {data.about?.role}
+              </div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                Instituto Traslacional de Seguridad Genómica
               </div>
             </div>
           </div>
@@ -147,7 +156,7 @@ export default function Home() {
         subtitle="Perfil orientado a desarrollo full-stack, automatizacion y construccion de productos de datos con enfoque profesional."
       >
         <Card className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-violet-500/10 via-transparent to-cyan-400/10" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-indigo-500/10 via-transparent to-emerald-400/10" />
 
           <div className="relative">
             <p className="text-sm text-slate-600 dark:text-slate-300/80">
@@ -199,7 +208,8 @@ export default function Home() {
 
               <a
                 href="#contacto"
-                className="rounded-xl border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm text-violet-700 hover:bg-violet-500/20 dark:text-violet-100"
+                className="rounded-xl border border-indigo-500/30 bg-indigo-600/15 px-4 py-2 text-sm
+           text-indigo-700 hover:bg-indigo-600/20 dark:text-indigo-100"
               >
                 Contactar
               </a>
@@ -236,7 +246,7 @@ export default function Home() {
               <ul className="mt-4 space-y-2 text-sm text-slate-700 dark:text-slate-300/90">
                 {xp.bullets?.map((b, i) => (
                   <li key={i} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-violet-500/70" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-500/70" />
                     <span>{b}</span>
                   </li>
                 ))}
@@ -271,7 +281,7 @@ export default function Home() {
                 "rounded-full border px-4 py-2 text-sm transition",
                 "border-black/10 dark:border-white/10",
                 tag === t
-                  ? "bg-violet-500/15 text-violet-700 dark:text-violet-100"
+                  ? "bg-indigo-600/15 text-indigo-700 dark:text-indigo-100"
                   : "bg-white text-slate-700 hover:bg-slate-50 dark:bg-white/5 dark:text-slate-200/80 dark:hover:bg-white/10",
               ].join(" ")}
             >
@@ -313,11 +323,11 @@ export default function Home() {
           ))}
         </div>
       </Section>
-
+      
       <Section
         id="contacto"
         title="Contacto"
-        subtitle="Si te interesa mi perfil para practicas, trainee o proyecto, aqui podemos conectar."
+        subtitle="Si te interesa mi perfil para oferta de trabajo, trainee o proyecto, aqui podemos conectar."
       >
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
@@ -354,7 +364,7 @@ export default function Home() {
 
             <form onSubmit={onSubmit} className="mt-4 space-y-3">
               <input
-                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-violet-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
+                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-indigo-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
                 placeholder="Tu nombre"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -362,7 +372,7 @@ export default function Home() {
               />
 
               <input
-                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-violet-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
+                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-indigo-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
                 placeholder="Tu correo"
                 type="email"
                 value={form.email}
@@ -371,7 +381,7 @@ export default function Home() {
               />
 
               <textarea
-                className="w-full min-h-[130px] rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-violet-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
+                className="w-full min-h-[130px] rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-indigo-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
                 placeholder="Tu mensaje"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -380,7 +390,8 @@ export default function Home() {
 
               <button
                 disabled={sending}
-                className="rounded-xl border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm text-violet-700 hover:bg-violet-500/20 disabled:opacity-60 dark:text-violet-100"
+                className="rounded-xl border border-indigo-500/30 bg-indigo-600/15 px-4 py-2 text-sm
+           text-indigo-700 hover:bg-indigo-600/20 disabled:opacity-60 dark:text-indigo-100"
               >
                 {sending ? "Enviando..." : "Enviar"}
               </button>
