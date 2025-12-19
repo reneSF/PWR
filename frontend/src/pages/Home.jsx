@@ -317,7 +317,7 @@ export default function Home() {
       <Section
         id="contacto"
         title="Contacto"
-        subtitle="Si te interesa mi perfil para practicas, trainee o proyecto, aqui podemos conectar."
+        subtitle="Si te interesa mi perfil para ofertas de trabajo, trainee o proyecto, aqui podemos conectar."
       >
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
