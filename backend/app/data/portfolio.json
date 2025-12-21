@@ -10,8 +10,8 @@
       "Integración: datos estructurados (JSON), módulos interactivos y herramientas de DevOps"
     ],
     "links": [
-      { "label": "GitHub", "url": "https://github.com/tuusuario" },
-      { "label": "LinkedIn", "url": "https://linkedin.com/in/tuusuario" },
+      { "label": "GitHub", "url": "https://github.com/reneSF" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rene-lopez-52966b236/" },
       { "label": "CV (PDF)", "url": "/cv.pdf" }
     ]
   },
@@ -31,13 +31,18 @@
       "tech": [
         "Python",
         "FastAPI",
-        "JSON",
         "ReportLab",
         "PyPDF2",
+        "JS",
         "React",
         "Vue",
         "Docker",
-        "Linux"
+        "Linux",
+        "MySQL",
+        "MongoDB",
+        "Git",
+        "GitHub",
+        "CLI"
       ]
     }
   ],
@@ -54,8 +59,8 @@
       ],
       "stack": ["Python", "ReportLab", "PyPDF2", "JSON"],
       "links": [
-        { "label": "Repositorio", "url": "https://github.com/tuusuario/pablo-pdf" },
-        { "label": "Demo", "url": "https://tusitio.com/demo-pdf" }
+        { "label": "Repositorio", "url": "https://github.com/reneSF/Pruebas_PABLO-1.0.0" },
+        { "label": "Demo", "url": "/PABLO_DIAGNOSTICO.pdf" }
       ]
     },
     {
@@ -70,7 +75,7 @@
       ],
       "stack": ["Frontend Web", "HTML/CSS", "JavaScript", "Consumo de JSON"],
       "links": [
-        { "label": "Sitio", "url": "https://tusitio.com/pablo-news" }
+        { "label": "Sitio", "url": "https://pablo.itrasig.org/" }
       ]
     },
     {
@@ -84,7 +89,7 @@
       ],
       "stack": ["Python", "Backend", "Frontend", "JSON"],
       "links": [
-        { "label": "Caso/Descripción", "url": "https://tusitio.com/cotizador" }
+        { "label": "Repositorio", "url": "https://github.com/reneSF/PDF_SERVER" }
       ]
     },
     {
@@ -98,7 +103,7 @@
       ],
       "stack": ["Prototipado", "Datos", "Web", "APIs (si aplica)"],
       "links": [
-        { "label": "Proyecto", "url": "https://tusitio.com/spaceapps" }
+        { "label": "Proyecto", "url": "https://www.linkedin.com/posts/rene-lopez-52966b236_reconocimiento-nasa-space-apps-activity-7305713431146299392-2k5W?utm_source=share&utm_medium=member_desktop&rcm=ACoAADrUmzEBON_QcnCD25vddVhXo39fuaY82-o" }
       ]
     },
     {
@@ -121,7 +126,8 @@
       "Vite",
       "HTML",
       "CSS",
-      "Tailwind"
+      "Tailwind",
+      "JavaScript"
     ],
     "backend": [
       "Python",
@@ -146,7 +152,10 @@
       "Comunicación técnica",
       "Trabajo en equipo",
       "Pensamiento analítico",
-      "Autonomía"
+      "Autonomía",
+      "Autogestión",
+      "Comunicación técnica con audiencias especificas",
+      "Adaptavilidad en entornos de investigación y desarrollo"
     ]
   },
   "contact": {
