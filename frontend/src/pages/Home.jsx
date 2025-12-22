@@ -40,7 +40,7 @@ export default function Home() {
     return data.projects.filter((p) => p.tag === tag);
   }, [data, tag]);
 
-  async function onSubmit(e) {
+  /* async function onSubmit(e) {
     e.preventDefault();
     setSending(true);
     setSentOk(false);
@@ -54,8 +54,37 @@ export default function Home() {
     } finally {
       setSending(false);
     }
-  }
+  } */
+ function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
+async function onSubmit(e) {
+  e.preventDefault();
+  setSending(true);
+  setSentOk(false);
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...form,
+      }),
+    });
+
+    setSentOk(true);
+    setForm({ name: "", email: "", message: "" });
+  } catch (err) {
+    console.error(err);
+    alert("No se pudo enviar. Intenta de nuevo.");
+  } finally {
+    setSending(false);
+  }
+}
   const shellClass =
     "min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100";
 
@@ -352,9 +381,28 @@ export default function Home() {
           <Card>
             <div className="text-sm font-semibold">Enviame un mensaje</div>
 
-            <form onSubmit={onSubmit} className="mt-4 space-y-3">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onSubmit={onSubmit}
+              className="mt-4 space-y-3"
+            >
+              {/* Requerido por Netlify Forms */}
+              <input type="hidden" name="form-name" value="contact" />
+
+              {/* Honeypot anti-spam */}
+              <p className="hidden">
+                <label>
+                  Don’t fill this out: <input name="bot-field" />
+                </label>
+              </p>
+
               <input
-                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-violet-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
+                name="name"
+                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-indigo-500/40
+                          dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
                 placeholder="Tu nombre"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -362,7 +410,9 @@ export default function Home() {
               />
 
               <input
-                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-violet-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
+                name="email"
+                className="w-full rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-indigo-500/40
+                          dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
                 placeholder="Tu correo"
                 type="email"
                 value={form.email}
@@ -371,7 +421,9 @@ export default function Home() {
               />
 
               <textarea
-                className="w-full min-h-[130px] rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-violet-400/40 dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
+                name="message"
+                className="w-full min-h-[130px] rounded-xl border border-black/10 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:border-indigo-500/40
+                          dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:placeholder:text-slate-400/70"
                 placeholder="Tu mensaje"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -380,14 +432,15 @@ export default function Home() {
 
               <button
                 disabled={sending}
-                className="rounded-xl border border-violet-400/30 bg-violet-500/15 px-4 py-2 text-sm text-violet-700 hover:bg-violet-500/20 disabled:opacity-60 dark:text-violet-100"
+                className="rounded-xl border border-indigo-500/30 bg-indigo-600/15 px-4 py-2 text-sm
+                          text-indigo-700 hover:bg-indigo-600/20 disabled:opacity-60 dark:text-indigo-100"
               >
                 {sending ? "Enviando..." : "Enviar"}
               </button>
 
               {sentOk ? (
                 <div className="text-xs text-slate-600 dark:text-slate-300/80">
-                  Listo. Mensaje enviado (si tu backend lo procesa).
+                  Listo. Mensaje enviado ✅
                 </div>
               ) : null}
             </form>

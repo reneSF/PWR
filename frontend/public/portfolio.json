@@ -15,8 +15,7 @@
       { "label": "CV (PDF)", "url": "/René_López_CV.pdf" }
     ]
   },
-  "experience": [
-    {
+    "experience": [{
       "company": "ITRASIG",
       "title": "Desarrollador Full-Stack (Python + Web)",
       "period": "2025",
